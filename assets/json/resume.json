@@ -28,12 +28,7 @@
       "startDate": "Summer",
       "endDate": "2023",
       "summary": "Conceptualized, designed, and developed a website for integrating interactive Platform-Focused User Interface (PFUI) elements.",
-      "highlights": [
-        "UI/UX atomic design principles",
-        "Software development lifecycle",
-        "Team collaboration",
-        "Agile methodologies"
-      ]
+      "highlights": ["UI/UX atomic design principles", "Software development lifecycle", "Team collaboration", "Agile methodologies"]
     },
     {
       "name": "Kratos Defense and Security Solutions, San Diego, CA",
@@ -42,12 +37,7 @@
       "startDate": "Summer",
       "endDate": "2022",
       "summary": "Migrated legacy satellite drivers, improving compatibility and increasing performance for critical hardware components.",
-      "highlights": [
-        "Satellite communication systems",
-        "Backend development",
-        "Performance optimization",
-        "System Integration"
-      ]
+      "highlights": ["Satellite communication systems", "Backend development", "Performance optimization", "System Integration"]
     }
   ],
   "education": [
