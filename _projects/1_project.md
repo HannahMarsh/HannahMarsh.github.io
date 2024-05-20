@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Mobile VR Lab
+description: An immersive VR educational system designed to blend guided tours with interactive 3D exploration
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: school
 related_publications: true
 ---
 

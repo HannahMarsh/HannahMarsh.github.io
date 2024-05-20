@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: Selective Replication
+description: A simulation modeling interactions between a database, cache nodes, and client requests
 img: assets/img/3.jpg
 importance: 2
-category: work
+category: school
 giscus_comments: true
 ---
 
