@@ -2,7 +2,7 @@
 layout: page
 title: Selective Replication
 description: A simulation modeling interactions between a database, cache nodes, and client requests
-img: assets/img/3.jpg
+img: assets/img/selective_replication.png
 importance: 2
 category: school
 giscus_comments: true

@@ -92,6 +92,41 @@ div.container-pdf {
 /*****************************
  * CV LIST_GROUPS styles
  *****************************/
+.cv_skills {
+  div.list-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: left;
+  }
+  div.list-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  td.list-group-category {
+    color: var(--global-theme-color);
+    margin-bottom: 0.5rem;
+  }
+
+  td.list-group-category-icon {
+    font-size: 0.8rem;
+    color: var(--global-theme-color);
+    width: 1.4rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+  }
+  @media (min-width: 768px) {
+    .col-md-6 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
 
 div.list-groups {
   display: flex;

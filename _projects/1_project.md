@@ -2,7 +2,7 @@
 layout: page
 title: Mobile VR Lab
 description: An immersive VR educational system designed to blend guided tours with interactive 3D exploration
-img: assets/img/12.jpg
+img: assets/img/mobile_vr_lab2.png
 importance: 1
 category: school
 related_publications: true
