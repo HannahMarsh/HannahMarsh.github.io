@@ -2,7 +2,7 @@
 layout: page
 title: Mobile VR Lab
 description: An immersive VR educational system designed to blend guided tours with interactive 3D exploration
-img: assets/img/mobile_vr_lab2.png
+img: assets/img/projects/mobile_vr_lab/architecture_diagram.png
 importance: 1
 category: school
 related_publications: false
@@ -10,12 +10,16 @@ related_publications: false
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mobile_vr_lab2.png" title="Architecture Diagram" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" is_themed_image=true path="assets/img/projects/mobile_vr_lab/architecture_diagram_no_background.png" title="Architecture Diagram" class="img-fluid rounded z-depth-0" %}
     </div>
 </div>
 <div class="caption">
     (above) Mobile VR Lab Architecture Diagram
 </div>
+
+<script>
+    let theme = determineComputedTheme();
+</script>
 
 ---
 

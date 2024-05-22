@@ -29,6 +29,9 @@ let applyTheme = () => {
   setHighlight(theme);
   setGiscusTheme(theme);
 
+  // Update theme-dependent images
+  updateThemeDependentImages(theme);
+
   // if mermaid is not defined, do nothing
   if (typeof mermaid !== "undefined") {
     setMermaidTheme(theme);
@@ -80,6 +83,15 @@ let applyTheme = () => {
       background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
     });
   }
+};
+
+// Function to update all theme-dependent images
+let updateThemeDependentImages = (theme) => {
+  const images = document.querySelectorAll(".theme-dependent-image");
+  images.forEach((img) => {
+    const src = theme === "dark" ? img.dataset.darkSrc : img.dataset.lightSrc;
+    img.src = src;
+  });
 };
 
 let setHighlight = (theme) => {

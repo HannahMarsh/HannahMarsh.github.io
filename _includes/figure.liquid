@@ -1,4 +1,21 @@
 {% assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+{% assign is_themed_image = include.is_themed_image %}
+{% if is_themed_image %}
+  {% assign light_img_path = include.path
+    | replace: '.jpg', '_light.jpg'
+    | replace: '.jpeg', '_light.jpeg'
+    | replace: '.png', '_light.png'
+    | replace: '.tiff', '_light.tiff'
+    | replace: '.gif', '_light.gif'
+  %}
+  {% assign dark_img_path = include.path
+    | replace: '.jpg', '_dark.jpg'
+    | replace: '.jpeg', '_dark.jpeg'
+    | replace: '.png', '_dark.png'
+    | replace: '.tiff', '_dark.tiff'
+    | replace: '.gif', '_dark.gif'
+  %}
+{% endif %}
 
 <figure
   {% if include.slot %}
@@ -23,53 +40,108 @@
         type="image/webp"
       >
     {% endif %}
-    <img
-      src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
-      {% if include.class %}
-        class="{{ include.class }}"
-      {% endif %}
-      {% if include.width %}
-        width="{{ include.width }}"
-      {% else %}
-        width="100%"
-      {% endif %}
-      {% if include.height %}
-        height="{{ include.height }}"
-      {% else %}
-        height="auto"
-      {% endif %}
-      {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
-        style="
-          {% if include['min-width'] %}
-            min-width: {{ include.min-width }};
-          {% endif %}
-          {% if include['min-height'] %}
-            min-height: {{ include.min-height }};
-          {% endif %}
-          {% if include['max-width'] %}
-            max-width: {{ include.max-width }};
-          {% endif %}
-          {% if include['max-height'] %}
-            max-height: {{ include.max-height }};
-          {% endif %}
-        "
-      {% endif %}
-      {% if include.alt %}
-        alt="{{ include.alt }}"
-      {% endif %}
-      {% if include.title %}
-        title="{{ include.title }}"
-      {% endif %}
-      {% if include.zoomable %}
-        data-zoomable
-      {% endif %}
-      {% if include.loading %}
-        loading="{{ include.loading }}"
-      {% elsif site.lazy_loading_images %}
-        loading="lazy"
-      {% endif %}
-      onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
-    >
+
+    {% if is_themed_image %}
+      <img
+        src="{% if include.cache_bust %}{{ light_img_path | relative_url | bust_file_cache }}{% else %}{{ light_img_path | relative_url }}{% endif %}"
+        data-dark-src="{{ dark_img_path | relative_url }}"
+        data-light-src="{{ light_img_path | relative_url }}"
+        {% if include.class %}
+          class="theme-dependent-image {{ include.class }}"
+        {% else %}
+          class="theme-dependent-image"
+        {% endif %}
+        {% if include.width %}
+          width="{{ include.width }}"
+        {% else %}
+          width="100%"
+        {% endif %}
+        {% if include.height %}
+          height="{{ include.height }}"
+        {% else %}
+          height="auto"
+        {% endif %}
+        {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
+          style="
+            {% if include['min-width'] %}
+              min-width: {{ include.min-width }};
+            {% endif %}
+            {% if include['min-height'] %}
+              min-height: {{ include.min-height }};
+            {% endif %}
+            {% if include['max-width'] %}
+              max-width: {{ include.max-width }};
+            {% endif %}
+            {% if include['max-height'] %}
+              max-height: {{ include.max-height }};
+            {% endif %}
+          "
+        {% endif %}
+        {% if include.alt %}
+          alt="{{ include.alt }}"
+        {% endif %}
+        {% if include.title %}
+          title="{{ include.title }}"
+        {% endif %}
+        {% if include.zoomable %}
+          data-zoomable
+        {% endif %}
+        {% if include.loading %}
+          loading="{{ include.loading }}"
+        {% elsif site.lazy_loading_images %}
+          loading="lazy"
+        {% endif %}
+        onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      >
+    {% else %}
+      <img
+        src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+        {% if include.class %}
+          class="{{ include.class }}"
+        {% endif %}
+        {% if include.width %}
+          width="{{ include.width }}"
+        {% else %}
+          width="100%"
+        {% endif %}
+        {% if include.height %}
+          height="{{ include.height }}"
+        {% else %}
+          height="auto"
+        {% endif %}
+        {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
+          style="
+            {% if include['min-width'] %}
+              min-width: {{ include.min-width }};
+            {% endif %}
+            {% if include['min-height'] %}
+              min-height: {{ include.min-height }};
+            {% endif %}
+            {% if include['max-width'] %}
+              max-width: {{ include.max-width }};
+            {% endif %}
+            {% if include['max-height'] %}
+              max-height: {{ include.max-height }};
+            {% endif %}
+          "
+        {% endif %}
+        {% if include.alt %}
+          alt="{{ include.alt }}"
+        {% endif %}
+        {% if include.title %}
+          title="{{ include.title }}"
+        {% endif %}
+        {% if include.zoomable %}
+          data-zoomable
+        {% endif %}
+        {% if include.loading %}
+          loading="{{ include.loading }}"
+        {% elsif site.lazy_loading_images %}
+          loading="lazy"
+        {% endif %}
+        onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+      >
+    {% endif %}
   </picture>
 
   {% if include.caption %}
