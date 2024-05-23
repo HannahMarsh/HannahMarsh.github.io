@@ -44,12 +44,4 @@ Our selective replication strategy involves a dual-layered hashing mechanism whe
 
 ### Methods and Evaluation
 
-Our comprehensive evaluation demonstrated the efficacy of this approach in mitigating the adverse effects of node unavailability. By focusing on selectively replicating only the most frequently accessed data, we maintained minimal additional storage requirements and avoided significant impacts on overall system performance.
-
----
-
-### Results and Impact
-
-The project successfully mitigated the risk of cascading failures and performance bottlenecks, significantly enhancing the resilience and operational integrity of distributed caching systems. This approach offers a balanced compromise between resilience and efficiency, making it a viable strategy for systems requiring high scalability and performance.
-
----
+We hope that our evaluation demonstrates the efficacy of this approach in mitigating the adverse effects of node unavailability. We hypothesize that by focusing on selectively replicating only the most frequently accessed data, we can maintain minimal additional storage requirements and avoid significant impacts on overall system performance.
