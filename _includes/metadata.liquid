@@ -1,4 +1,4 @@
-{% if site.enable_google_container %}
+{% if site.enable_google_tag_manager %}
   <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
@@ -10,7 +10,7 @@
       j.async = true;
       j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', '{{ site.google_container }}');
+    })(window, document, 'script', 'dataLayer', '{{ site.google_tag_manager }}');
   </script>
   <!-- End Google Tag Manager -->
 {% endif %}
@@ -256,11 +256,11 @@
   </script>
 {% endif %}
 
-{% if site.enable_google_container %}
+{% if site.enable_google_tag_manager %}
   <!-- Google Tag Manager (noscript) -->
   <noscript
     ><iframe
-      src="https://www.googletagmanager.com/ns.html?id=G{{ site.google_container }}"
+      src="https://www.googletagmanager.com/ns.html?id=G{{ site.google_tag_manager }}"
       height="0"
       width="0"
       style="display:none;visibility:hidden"
