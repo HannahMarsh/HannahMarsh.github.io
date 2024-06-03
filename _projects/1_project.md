@@ -33,7 +33,7 @@ This project integrates advanced VR hardware and software technologies to create
 
 - **Gesture-Based Interactions:** Students navigate the VR environment using intuitive hand gestures, eliminating the need for physical controllers.
 - **High-Fidelity 3D Visuals:** Our system supports high-polygon count models with 4K textures, ensuring a visually rich educational experience.
-- **Independent of Internet:** Designed to operate without the need for an internet connection, making it suitable for all school environments.
+- **Air-Gapped Design** Designed to operate without the need for a high-bandwidth internet connection, making it more secure and suitable for all school environments.
 
 ---
 
