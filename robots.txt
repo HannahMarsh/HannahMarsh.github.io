@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://HannahMarsh.github.io/sitemap.xml
+Sitemap: www.hannah-marsh.com/sitemap.xml
