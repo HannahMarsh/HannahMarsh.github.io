@@ -33,6 +33,7 @@
     }
   ],
   "research": [
+    
     {
       "name": "University of New Hampshire",
       "position": "Independent Study (under Dr. Aleksey Charapko)",
@@ -40,6 +41,22 @@
       "date": "Spring, 2024",
       "summary": "Explored and developed a selective replication solution to address database instability induced by cache node failure.",
       "highlights": ["System architecture design", "Concurrent programming", "Research and analysis", "Technical writing"]
+    },
+    {
+      "name": "Tufts University",
+      "position": "Independent Study (under Dr. Diane Souvaine)",
+      "url": "https://www.tufts.edu/",
+      "date": "Summer, 2024",
+      "summary": "",
+      "highlights": ["Computational geometry"]
+    },
+    {
+      "name": "Tufts University",
+      "position": "Research Assistantship (under Dr. Megumi Ando)",
+      "url": "https://www.tufts.edu/",
+      "date": "Summer, 2024",
+      "summary": "",
+      "highlights": ["Cryptography", "Onion routing"]
     }
   ],
   "education": [
