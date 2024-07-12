@@ -196,18 +196,18 @@
   ],
   "interests": [
     {
-      "name": "Encryption",
+      "name": "Cryptography",
       "icon": "fa-solid fa-key",
-      "keywords": []
-    },
-    {
-      "name": "Quantum Computing",
-      "icon": "fa-solid fa-atom",
       "keywords": []
     },
     {
       "name": "Computational Geometry",
       "icon": "fa-solid fa-circle-nodes",
+      "keywords": []
+    },
+    {
+      "name": "Quantum Computing",
+      "icon": "fa-solid fa-atom",
       "keywords": []
     },
     {
